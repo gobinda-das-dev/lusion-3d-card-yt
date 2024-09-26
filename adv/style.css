@@ -1,0 +1,36 @@
+.card {
+   aspect-ratio: 314 / 438;
+   width: 20vw;
+   flex-shrink: 0;
+   border-radius: 1vw;
+   position: relative;
+   perspective: 350px;
+
+   .front {
+      height: 100%;
+      width: 100%;
+      background-color: white;
+      border-radius: inherit;
+      font-size: 3vw;
+      font-weight: 600;
+      display: grid;
+      place-items: center;
+      transform: rotateY(180deg);
+      backface-visibility: hidden;
+   }
+
+   .back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-image: url('./images/card.png');
+      background-size: cover;
+      background-color: white;
+      border-radius: inherit;
+      pointer-events: none;
+      transform: rotateY(0deg);
+      backface-visibility: hidden;
+   }
+}
